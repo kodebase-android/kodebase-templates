@@ -1,0 +1,46 @@
+<?xml version="1.0"?>
+<template
+    name="Kodebase Fragment"
+    description="This template creates Fragment, ViewModel and Data Binding layout.">
+
+    <category value="Kodebase" />
+
+    <parameter
+        id="name"
+        name="Name"
+        type="string"
+        constraints="class|nonempty|unique"
+        help="The name of the screen to create" />
+
+    <parameter
+        id="className"
+        name="Fragment Name"
+        type="string"
+        constraints="class|nonempty|unique"
+        suggest="${name}Fragment"
+        help="The name of the fragment class to create" />
+
+    <parameter
+        id="layoutName"
+        name="Layout Name"
+        type="string"
+        constraints="layout|nonempty|unique"
+        suggest="fragment_${classToResource(name)}"
+        help="The name of the layout to create" />
+
+    <parameter
+        id="viewModelName"
+        name="ViewModel Name"
+        type="string"
+        constraints="class|nonempty|unique"
+        suggest="${name}ViewModel"
+        help="The name of the ViewModel class to create" />
+
+    <globals file="globals.xml.ftl" />
+    <execute file="recipe.xml.ftl" />
+    
+    <thumbs>
+        <thumb>{THUMBNAIL_FILE_PATH}</thumb>
+    </thumbs>
+
+</template>
