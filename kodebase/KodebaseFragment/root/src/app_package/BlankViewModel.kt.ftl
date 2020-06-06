@@ -1,7 +1,7 @@
 package ${escapeKotlinIdentifiers(packageName)}
 
-import kodebase.viewmodel.KodebaseViewModel
+import app.ui.base.BaseVM
 
-class ${viewModelName} : KodebaseViewModel() {
+class ${viewModelName} : BaseVM() {
     
 }

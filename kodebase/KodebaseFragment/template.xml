@@ -33,7 +33,7 @@
         name="ViewModel Name"
         type="string"
         constraints="class|nonempty|unique"
-        suggest="${name}ViewModel"
+        suggest="${name}VM"
         help="The name of the ViewModel class to create" />
 
     <globals file="globals.xml.ftl" />

@@ -1,7 +1,5 @@
 <?xml version="1.0"?>
-<#import "root://activities/common/kotlin_macros.ftl" as kt>
 <recipe>
-    <@kt.addAllKotlinDependencies />
     <dependency mavenUrl="com.android.support:support-v4:${buildApi}.+"/>
     <dependency mavenUrl="android.arch.lifecycle:extensions:+"/>
     <#assign escapedResOut="${escapeXmlAttribute(resOut)}">
@@ -14,15 +12,14 @@
     <instantiate from="res/layout/blank_fragment.xml.ftl"
                    to="${escapedResOut}/layout/${escapeXmlAttribute(layoutName)}.xml" />
 
+    <instantiate from="src/app_package/BlankFragment.kt.ftl"
+                   to="${escapedSrcOut}/${className}.kt" />
+
+    <instantiate from="src/app_package/BlankViewModel.kt.ftl"
+                   to="${escapedSrcOut}/${viewModelName}.kt" />
+
+    <open file="${escapedSrcOut}/${viewModelName}.kt" />
+    <open file="${escapedSrcOut}/${className}.kt" />
     <open file="${escapedResOut}/layout/${escapeXmlAttribute(layoutName)}.xml" />
 
-    <instantiate from="src/app_package/BlankFragment.${ktOrJavaExt}.ftl"
-                   to="${escapedSrcOut}/${className}.${ktOrJavaExt}" />
-
-    <open file="${escapedSrcOut}/${className}.${ktOrJavaExt}" />
-
-    <instantiate from="src/app_package/BlankViewModel.${ktOrJavaExt}.ftl"
-                   to="${escapedSrcOut}/${viewModelName}.${ktOrJavaExt}" />
-
-    <open file="${escapedSrcOut}/${viewModelName}.${ktOrJavaExt}" />
 </recipe>

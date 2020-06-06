@@ -1,11 +1,9 @@
 package ${escapeKotlinIdentifiers(packageName)}
 
-import kodebase.view.KodebaseFragment
+import app.ui.base.BaseFragment
+import app.R
+import app.databinding.Fragment${name}Binding
 
-<#if applicationPackage??>
-import ${applicationPackage}.R
-</#if>
-
-class ${className} : KodebaseFragment<Fragment${name}Binding, ${viewModelName}>(R.layout.${layoutName}, ${viewModelName}::class) {
+class ${className} : BaseFragment<Fragment${name}Binding, ${viewModelName}>(R.layout.${layoutName}, ${viewModelName}::class) {
 
 }
