@@ -9,13 +9,13 @@
         <dependency mavenUrl="androidx.lifecycle:lifecycle-viewmodel-ktx:+"/>
     </#if>
 
-    <instantiate from="res/layout/blank_fragment.xml.ftl"
+    <instantiate from="res/layout/fragment.xml.ftl"
                    to="${escapedResOut}/layout/${escapeXmlAttribute(layoutName)}.xml" />
 
-    <instantiate from="src/app_package/BlankFragment.kt.ftl"
+    <instantiate from="src/app_package/Fragment.kt.ftl"
                    to="${escapedSrcOut}/${className}.kt" />
 
-    <instantiate from="src/app_package/BlankViewModel.kt.ftl"
+    <instantiate from="src/app_package/ViewModel.kt.ftl"
                    to="${escapedSrcOut}/${viewModelName}.kt" />
 
     <open file="${escapedSrcOut}/${viewModelName}.kt" />

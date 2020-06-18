@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <template
-    name="Kodebase Fragment"
+    name="Fragment"
     description="This template creates Fragment, ViewModel and Data Binding layout.">
 
     <category value="Kodebase" />

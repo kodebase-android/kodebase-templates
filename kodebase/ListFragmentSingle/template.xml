@@ -1,0 +1,79 @@
+<?xml version="1.0"?>
+<template
+    name="List Fragment (Single Type)"
+    description="This template creates Fragment with RecyclerView, ViewModel and Data Binding layouts.">
+
+    <category value="Kodebase" />
+
+    <parameter
+        id="name"
+        name="Screen Name"
+        type="string"
+        constraints="class|nonempty"
+        help="The name of the screen to create" />
+
+    <parameter
+        id="itemName"
+        name="Item Name"
+        type="string"
+        constraints="class|nonempty|unique"
+        help="The name of item entity" />
+
+    <parameter
+        id="orientation"
+        name="Orientation"
+        type="enum"
+        help="Orientation of RecyclerView" />
+
+    <parameter id="orientation" name="Orientation" type="enum" default="vertical" help="Choose RecyclerView orientation">
+        <option id="vertical">Vertical</option>
+        <option id="horizontal">Horizontal</option>
+    </parameter>
+
+    <parameter id="spanCount" name="Span Count" type="enum" default="1" help="Number of columns">
+        <option id="1">1</option>
+        <option id="2">2</option>
+        <option id="3">3</option>
+        <option id="4">4</option>
+    </parameter>
+
+    <parameter
+        id="className"
+        name="Fragment Name"
+        type="string"
+        constraints="class|nonempty|unique"
+        suggest="${name}Fragment"
+        help="The name of the fragment class to create" />
+
+    <parameter
+        id="layoutName"
+        name="Layout Name"
+        type="string"
+        constraints="layout|nonempty|unique"
+        suggest="fragment_${classToResource(name)}"
+        help="The name of the layout to create" />
+
+    <parameter
+        id="viewModelName"
+        name="ViewModel Name"
+        type="string"
+        constraints="class|nonempty|unique"
+        suggest="${name}VM"
+        help="The name of the ViewModel class to create" />
+
+    <parameter
+        id="itemLayoutName"
+        name="Item Layout Name"
+        type="string"
+        constraints="layout|nonempty|unique"
+        suggest="item_${classToResource(itemName)}"
+        help="The name of the layout to create" />
+
+    <globals file="globals.xml.ftl" />
+    <execute file="recipe.xml.ftl" />
+    
+    <thumbs>
+        <thumb>{THUMBNAIL_FILE_PATH}</thumb>
+    </thumbs>
+
+</template>
