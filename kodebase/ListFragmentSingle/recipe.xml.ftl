@@ -24,6 +24,8 @@
     <instantiate from="res/layout/item.xml.ftl"
                    to="${escapedResOut}/layout/${escapeXmlAttribute(itemLayoutName)}.xml" />
 
+    <merge from="res/navigation/nav_graph.xml.ftl" to="${escapedResOut}/navigation/nav_graph.xml" />
+
     <open file="${escapedSrcOut}/${viewModelName}.kt" />
     <open file="${escapedSrcOut}/${className}.kt" />
     <open file="${escapedResOut}/layout/${escapeXmlAttribute(layoutName)}.xml" />

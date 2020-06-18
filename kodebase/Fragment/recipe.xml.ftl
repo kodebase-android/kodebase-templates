@@ -9,6 +9,8 @@
         <dependency mavenUrl="androidx.lifecycle:lifecycle-viewmodel-ktx:+"/>
     </#if>
 
+    <merge from="res/navigation/nav_graph.xml.ftl" to="${escapedResOut}/navigation/nav_graph.xml" />
+
     <instantiate from="res/layout/fragment.xml.ftl"
                    to="${escapedResOut}/layout/${escapeXmlAttribute(layoutName)}.xml" />
 
