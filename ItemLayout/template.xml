@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<template
+    name="List Item (Layout only)"
+    description="Creates a new XML layout file with Data Binding.">
+
+    <category value="Kodebase" />
+
+    <parameter
+        id="itemLayoutName"
+        name="Item Layout Name"
+        type="string"
+        constraints="layout|nonempty|unique"
+        suggest="item_"
+        help="The name of the layout to create" />
+
+    <parameter id="orientation" name="Orientation" type="enum" default="vertical" help="Parent RecyclerView orientation">
+        <option id="vertical">Vertical</option>
+        <option id="horizontal">Horizontal</option>
+    </parameter>
+
+    <execute file="recipe.xml.ftl" />
+
+</template>

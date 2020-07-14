@@ -19,12 +19,6 @@
         constraints="class|nonempty|unique"
         help="The name of item entity" />
 
-    <parameter
-        id="orientation"
-        name="Orientation"
-        type="enum"
-        help="Orientation of RecyclerView" />
-
     <parameter id="orientation" name="Orientation" type="enum" default="vertical" help="Choose RecyclerView orientation">
         <option id="vertical">Vertical</option>
         <option id="horizontal">Horizontal</option>
