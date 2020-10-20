@@ -1,3 +1,5 @@
+Notice: Unfortunately template API has been changed in Android Studio 4.1 and Kodebase templates doesn't work in 4.1, I'm looking for solution. 
+
 # Kodebase Templates for Android Studio
 This is a companion for Kodebase Android Project. These Android Studio file templates helps you create Fragment, ViewModel and Data Binding layout by one click.
 
